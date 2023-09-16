@@ -1,7 +1,5 @@
 class AssetUtills{
   AssetUtills._();
-
-  static const _imagePath='assets/images';
-  static const logo='$_imagePath/logo.svg';
-
+  static const logo='assets/images/logo.svg';
+  static const logoNav='assets/images/logo_nav.svg';
 }
