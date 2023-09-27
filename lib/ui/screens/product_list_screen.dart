@@ -1,4 +1,5 @@
 import 'package:ecommerce/presentation/state_holders/state_holder_controller.dart';
+import 'package:ecommerce/ui/screens/product_details_screen.dart';
 import 'package:ecommerce/ui/widgets/product_cart.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -36,14 +37,20 @@ class _ProductListScreenState extends State<ProductListScreen> {
             style: TextStyle(color: Colors.black),
           ),
         ),
-        body: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 16.0),
-          child: GridView.builder(
-              gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                  crossAxisCount: 3, crossAxisSpacing: 16, mainAxisSpacing: 16),
-              itemBuilder: (context, index) {
-                return FittedBox(child: ProductCart());
-              }),
+        body: InkWell(
+          borderRadius: BorderRadius.circular(16),
+          onTap: (){
+          Get.to(()=>ProductDetails());  
+          },
+          child: Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 16.0),
+            child: GridView.builder(
+                gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                    crossAxisCount: 3, crossAxisSpacing: 16, mainAxisSpacing: 16),
+                itemBuilder: (context, index) {
+                  return FittedBox(child: ProductCart());
+                }),
+          ),
         ),
       ),
     );
