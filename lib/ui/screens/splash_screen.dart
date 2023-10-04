@@ -1,5 +1,6 @@
 import 'package:ecommerce/ui/screens/auth/email_verification_screen.dart';
 import 'package:ecommerce/ui/screens/home_screen.dart';
+import 'package:ecommerce/ui/screens/main_bottom_nav_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
@@ -23,7 +24,7 @@ class _SplashScreenState extends State<SplashScreen> {
 
   void navigationToLogin() {
     Future.delayed(Duration(seconds: 3)).then((_) {
-      Get.offAll(()=>HomeScreen());
+      Get.offAll(()=>MainBottomNavBar());
     });
   }
 
