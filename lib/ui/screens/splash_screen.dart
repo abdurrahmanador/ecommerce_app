@@ -24,7 +24,7 @@ class _SplashScreenState extends State<SplashScreen> {
 
   void navigationToLogin() {
     Future.delayed(Duration(seconds: 3)).then((_) {
-      Get.offAll(()=>MainBottomNavBar());
+      Get.offAll(()=>EmailVerificationScreen());
     });
   }
 
